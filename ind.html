@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Weather Dashboard</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
@@ -17,6 +19,7 @@
             display: flex;
             flex-direction: column;
         }
+
         .container {
             max-width: 800px;
             margin-top: 20px;
@@ -24,6 +27,7 @@
             display: flex;
             flex-direction: column;
         }
+
         .header {
             text-align: center;
             margin-bottom: 20px;
@@ -32,7 +36,10 @@
             padding: 15px;
             border-radius: 10px;
         }
-        .form-container, .weather-box, .forecast-box {
+
+        .form-container,
+        .weather-box,
+        .forecast-box {
             background-color: #6dd5ed;
             color: white;
             padding: 15px;
@@ -41,37 +48,48 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-        .form-container:hover, .weather-box:hover, .forecast-box:hover {
+
+        .form-container:hover,
+        .weather-box:hover,
+        .forecast-box:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
+
         .form-container label {
             color: white;
         }
+
         .form-container .btn-primary {
             background-color: #0056b3;
             border-color: #0056b3;
         }
+
         .form-container .btn-primary:hover {
             background-color: #003d82;
             border-color: #003d82;
         }
+
         .forecast-box {
-            flex: 1 1 calc(33% - 20px); /* Adjust width of forecast boxes */
+            flex: 1 1 calc(33% - 20px);
+            /* Adjust width of forecast boxes */
             margin: 10px;
             padding: 15px;
             text-align: center;
         }
+
         .footer {
             text-align: center;
             padding: 20px;
             background-color: #2193b0;
             color: white;
             border-radius: 0 0 10px 10px;
-            margin-top: auto; /* Push footer to the bottom */
+            margin-top: auto;
+            /* Push footer to the bottom */
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="header">
@@ -81,11 +99,13 @@
             <form id="weather-form">
                 <div class="form-group">
                     <label for="city">Enter a City Name</label>
-                    <input type="text" class="form-control" id="city" name="city" placeholder="E.g., New York, London, Tokyo" required>
+                    <input type="text" class="form-control" id="city" name="city"
+                        placeholder="E.g., New York, London, Tokyo" required>
                 </div>
                 <button type="submit" class="btn btn-primary btn-block">Search</button>
                 <hr>
-                <button type="button" class="btn btn-secondary btn-block" id="location-btn">Use Current Location</button>
+                <button type="button" class="btn btn-secondary btn-block" id="location-btn">Use Current
+                    Location</button>
             </form>
         </div>
         <div id="current-weather" class="weather-box">
@@ -97,7 +117,7 @@
             <!-- Forecast cards will be dynamically inserted here -->
         </div>
     </div>
-    
+
     <script>
         const cityInput = document.querySelector("#city");
         const searchButton = document.querySelector("#weather-form button[type='submit']");
@@ -201,4 +221,5 @@
         &copy; 2024 Weather Dashboard. All rights reserved.
     </div>
 </body>
+
 </html>
